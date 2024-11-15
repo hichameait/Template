@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.content {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+
+}
+.menu {
+    width: 90%;
+}
+.menu #icona{
+    display: none;
+}
+.homeicon {
+    flex: 1;
+    padding-left: 27px;
+}
+.list1 {
+    flex: 8;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #000000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+.list1  {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.list1 li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 25%;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+.sub-list {
+    display: none;
+}
+.sub-list li {
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+}
+
+#sublista1:hover .sub-list{
+    display: flex;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #a52fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px 10px 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: flex-start;
+
+}
+.list1 li a{
+    text-decoration: none;
+    color: black;
+}
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+.sec1 {
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;  
+}
+.sec2 {
+    width: 100%;
+    height: 100vh;
+    background-color: red;  
+}
+.sec3 {
+    width: 100%;
+    height: 100vh;
+    background-color: grey;  
+}
+.sec4 {
+    width: 100%;
+    height: 100vh;
+    background-color:blue;  
+}
+@media (max-width:800px) {
+    .menu {
+        flex: 8;
+    }
+}
+@media (max-width:600px){
+    .menu {
+        flex: 0;
+    }
+    .menu #icona{
+        display: block;
+        position: relative;
+        margin-right: 20px;
+    }
+    .list1 {
+        display: none;
+        background-color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    }
+    .list1 li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 25%;
+        background-color: white;
+        position: static;
+        
+    }
+
+    .menu:hover .list1 {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 50px;
+       
+        width: 100%;
+        left: 0;
+        height: 260px;
+    }
+    .sub-list {
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+    #sublista1:hover .sub-list {
+        width: 100%;
+        top: 60px;
+    }
+    
+}
